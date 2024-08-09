@@ -1,6 +1,6 @@
 import { Dispatch } from "react"
-import { AuthAction } from "../reducers/authReducer"
 import React from "react"
+import { AuthAction } from "./AuthProvider"
 
 interface AuthContextType {
   user: string
