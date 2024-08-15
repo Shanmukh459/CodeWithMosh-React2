@@ -1,4 +1,5 @@
 import useCounterStore from "./store"
+import { mountStoreDevtool } from "simple-zustand-devtools"
 
 const Counter = () => {
   const { counter, increment, reset } = useCounterStore()
@@ -15,5 +16,8 @@ const Counter = () => {
     </div>
   )
 }
+
+if (process.env.NODE_ENV === "development")
+  mountStoreDevtool("Counter store", useCounterStore)
 
 export default Counter
